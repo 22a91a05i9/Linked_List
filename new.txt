@@ -1,0 +1,2093 @@
+16.
+disarium number
+n=int(input())
+temp=n
+sum=0
+rev=0
+dc=0
+while(n!=0):
+    d=n%10
+    n=n//10
+    rev=rev*10+d
+while(rev!=0):
+    d=rev%10
+    rev=rev//10
+    dc=dc+1
+    dc**d
+    sum=sum+d**dc
+if(sum==temp):
+    print("True")
+else:
+    print("False")
+
+
+abundant number
+n=int(input())
+c=0
+for i in range(2,n):
+    if(n%i==0):
+        c=c+i
+if(c>n):
+    print("True")
+else:
+    print("False")
+
+
+closest palindrome
+n=int(input())
+p=0
+q=0
+def is_palindrome(s):
+    rev=0
+    d=0
+    t=s
+    while(s!=0):
+        d=s%10
+        s=s//10
+        rev=rev*10+d
+    if(t==rev):
+        return 1
+    else:
+        return 0
+for i in range(n-1,0,-1):
+    if(is_palindrome(i)):
+        p=i
+        break
+for i in range(n+1,10000):
+    if(is_palindrome(i)):
+        q=i
+        break
+if(abs(p-n)>abs(q-n)):
+    print(q)
+elif(abs(p-n)==abs(q-n)):
+    print(p,q)
+else:
+    print(p)
+
+
+palindrome
+n=int(input())
+temp=n
+rev=0
+while(n!=0):
+    d=n%10;
+    n=n//10;
+    rev=rev*10+d
+if(temp==rev):
+    print("True")
+else:
+    print("False")
+
+
+
+absolute difference numbers
+n,x=map(int,input().split())
+n=str(n)
+f=int(n[:x])
+l=int(n[-x:])
+print(abs(f-l))
+
+
+
+compound interest
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int p,t;
+    double r,i;
+    scanf("%d%lf%d",&p,&r,&t);
+    i=p*pow((1.0+r/100),t);
+    printf("%.2lf",i);
+}
+
+
+1
+Switches
+Maximum identical bowls
+Numbers with digits in increasing order of given N
+
+2
+primes in range
+def is_prime(n):
+    if(n==1):
+        return 0
+    else:
+        for i in range(2,int(n**0.5)+1):
+            if(n%i==0):
+                return 0;
+        return 1;
+n=int(input())
+m=int(input())
+c=0
+for i in range(n,m+1):
+    if(is_prime(i)):
+        c+=1
+print(c)
+
+
+diagonal of a polygon
+n=int(input())
+d=n*(n-3)//2
+print(d)
+
+
+3page
+hcf of an array
+a=int(input())
+arr=list(map(int,input().strip().split()))
+m=0
+for i in range(a):
+    if(m<arr[i]):
+        m=arr[i]
+for i in range(1,m+1):
+    c=0
+    for j in range(0,a):
+        if(arr[j]%i==0):
+            c+=1
+    if(c==a):
+        hcf=i
+print(hcf)
+
+angle between the hands
+i=input().split(':')
+h=int(i[0])
+m=int(i[1])
+a=abs((h*30)-(11*m)/2)
+if(a<360-a):
+    if a>int(a):
+        print("%.1f"%a)
+    else:
+        print("%.1f"%a)
+else:
+    x=float(360-a)
+    if x>int(x):
+        print("%.1f"%x)
+    else:
+        print("%.1f"%x)
+
+
+4th page
+reverse palindrome
+def rev(n):
+    s=0
+    while(n):
+        t=n%10
+        s=s*10+t
+        n=n//10
+    return s
+
+n=int(input())
+while(n):
+    n+=rev(n)
+    if (rev(n)==n):
+        print(n)
+        break
+else:
+    print("-1")
+
+evaluate the expression
+n=(input())
+z=eval(n)
+print(z)
+
+5th page
+can robber escape
+n=int(input())
+a=list(map(int,input().split()))
+odd=0
+for i in range(0,n):
+    if a[i]%2!=0:
+        odd+=1
+if odd<=2:
+    print("YES")
+else:
+    print("NO")
+
+        
+appy and contest
+n=int(input())
+for i in range(n):
+    m,a,b,k=map(int,input().split())
+    c1=m//a
+    c2=m//b
+    c=m//(a*b)
+    if(c1+c2-c>=k):
+        print("Win")
+    else:
+        print("Lose")
+
+minimum scale length
+n=int(input())
+arr=list(map(int,input().split()))
+for i in range(1,100):
+    c=0
+    for j in range(0,n):
+        if(arr[j]%i==0):
+            c+=1
+    if(c==n):
+        maxi=i
+print(maxi)
+
+count of the non-prime divisors of a given number
+n=int(input())
+m=0
+for i in range(1,n+1):
+    if(n%i==0):
+        c=0
+        for j in range(2,i):
+            if(i%j==0):
+                c+=1
+        if(c!=0):
+            m+=1
+print(m+1)
+
+6th page
+Program to print all palindromes in a given range
+n=int(input())
+m=int(input())
+def is_palindrome(n):
+    temp=n
+    rev=0
+    d=0
+    while(n!=0):
+        d=n%10
+        n=n//10
+        rev=rev*10+d
+    if(rev==temp):
+        return 1
+    else:
+        return 0;
+temp=0
+for i in range(n,m+1):
+    if(is_palindrome(i)):
+        print(i,end=" ")
+
+Even Odd Mixed
+n=int(input())
+c=0
+p=0
+dc=0
+while(n!=0):
+    d=n%10;
+    n=n//10;
+    dc=dc+1
+    if(d%2==0):
+        c=c+1;
+    else:
+        p=p+1;
+if(dc==c):
+    print("Even")
+elif(dc==p):
+    print("Odd")
+else:
+    print("Mixed")
+
+Grades of Rides
+a,b,c=map(int,input().split())
+if(a>50 and b>60 and c>100):
+    print("10")
+elif(a>50 and b>60):
+    print("9")
+elif(b>60 and c>100):
+    print("8")
+elif(a>50 and c>100):
+    print("7")
+elif(a>50 or b>60 or c>100):
+    print("6")
+else:
+    print("5")
+
+Roy and Profile Picture
+l=int(input())
+p=int(input())
+for i in range(1,p+1):
+    w,h=map(int,input().split())
+    if(w<l or h<l):
+        print("UPLOAD ANOTHER")
+    elif(w==h):
+        print("ACCEPTED")
+    else:
+        print("CROP IT")
+
+Count Divisors
+l,r,k=map(int,input().split())
+c=0
+for i in range(l,r+1):
+    if(i%k==0):
+        c=c+1;
+print(c)        
+
+7th page
+Small Factorials
+def factorial(s):
+    f=1
+    while(s!=0):
+        f=f*s
+        s-=1
+    return f
+n=int(input())
+for i in range(n):
+    p=int(input())
+    print(factorial(p))
+
+Battle of Primes 
+def prime(n):
+    while n:
+        c = 0
+        for i in range(2,n//2):
+            if n%i==0:
+                c+=1
+        if c==0:
+            return n
+        n+=1
+        
+a = int(input())
+b = int(input())
+print(prime(a+b+1)-(a+b))
+
+Power of a Number 
+x,y,m=map(int,input().split())
+z=(x**y)%m
+print(z)
+
+8th page
+Generate Prime Numbers In A Interval 
+n=int(input())
+m=int(input())
+def is_prime(s):
+    if(s==1):
+        return 0
+    for i in range(2,int(s**0.5)+1):
+        if(s%i==0):
+            return 0
+    else:
+        return 1
+for i in range(n,m+1):
+    if(is_prime(i)):
+        print(i)
+
+Add Digits 
+n=int(input())
+s=0
+while(n>9):
+    s=0
+    while(n!=0):
+        d=n%10
+        n=n//10
+        s=s+d
+    n=s
+print(n)
+
+Valid Perfect Square 
+n=int(input())
+for i in range(n):
+    p=int(input())
+    if(int(p**0.5)==(p**0.5)):
+        print("True")
+    else:
+        print("False")
+
+
+Perfect Number 
+n=int(input( ))
+s=0
+for i in range(1,n):
+    if(n%i==0):
+        s=s+i
+if(s==n):
+    print("True")
+else:
+    print("False")
+
+
+Self Dividing Numbers
+n=int(input())
+m=int(input())
+def is_fun(s):
+    c=0
+    l=0
+    t=s
+    while(s!=0):
+        d=s%10
+        s=s//10
+        c+=1
+        if(d!=0 and t%d==0):
+            l+=1
+    if(c==l):
+        return 1
+    else:
+        return 0
+for i in range(n,m+1):
+    if(is_fun(i)):
+        print(i,end=" ")
+
+Subtract the Product and Sum of Digits of an Integer
+n=int(input())
+s=0
+p=1
+while(n!=0):
+    d=n%10;
+    n=n//10;
+    s=s+d;
+    p=p*d;
+print(p-s)
+
+
+Spy Number
+n=int(input())
+sum=0
+product=1
+while(n!=0):
+    d=n%10;
+    n=n//10;
+    sum=sum+d
+    product=product*d
+if(sum==product):
+    print("Spy Number")
+else:
+    print("Not Spy Number")
+
+
+ 
+Neon Number
+n=int(input())
+sum=0
+p=n*n
+while(p!=0):
+    d=p%10
+    p=p//10
+    sum=sum+d
+if(sum==n):
+    print("Neon Number")
+else:
+    print("Not Neon Number")
+
+
+
+Minimum absolute difference between N and a power of 2
+n=int(input())
+i=0
+while(True):
+    if(2**i<n):
+        i=i+1
+        continue
+    elif(2**i==n):
+        print(0)
+        break
+    else:
+        if(abs(n-(2**(i-1)))>abs(n-(2**(i)))):
+            print(abs(n-(2**(i))))
+            break
+        else:
+            print(abs(n-(2**(i-1))))
+            break
+
+
+LCM 
+a,b=map(int,input().split())
+t=2
+lcm=1
+while(a>=t and b>=t):
+    if(a%t==0 and b%t==0):
+        a=a//t
+        b=b//t
+        lcm=lcm*t
+    else:
+        t=t+1
+print(lcm*a*b)        
+
+12th page
+Reverse Integer 
+n=int(input())
+s=0
+if(n<0):
+    n=(-1)*n
+    while(n>0):
+        r=n%10
+        s=s*10+r
+        n=n//10
+    print(-s)
+else:
+    while(n>0):
+        r=n%10 
+        s=s*10+r
+        n=n//10
+    print(s)
+
+Pronic Number or Heteromecic Number 
+n=int(input())
+for i in range(0,n):
+    if(i*(i+1)==n):
+        break;
+if(n==i*(i+1)):
+    print("YES")
+else:
+    print("NO")
+
+circular prime
+n=int(input())
+c=0
+s=0
+for i in range(2,(n//2)+1):
+    if(n%i==0):
+        break
+else:
+    c=c+1
+while(n>0):
+    r=n%10
+    s=s*10+r
+    n=n//10
+for i in range(2,(s//2)+1):
+    if(s%i==0):
+        break
+else:
+    c=c+1
+if(c==2):
+    print("circular prime")
+elif(c==1):
+    print("prime but not a circular prime")
+else:
+    print("not prime")
+    
+Automorphic Number
+n=int(input())
+sq=n*n
+temp=n
+c=1
+while(n!=0):
+    n=n//10
+    c=c*10
+if(sq%c==temp):
+    print("Automorphic Number")
+else:
+    print("Not an Automorphic Number")
+
+13th page
+Amicable Numbers 
+n=int(input())
+m=int(input())
+c=0
+p=0
+for i in range(1,n):
+    if(n%i==0):
+        c+=i
+for i in range(1,m):
+    if(m%i==0):
+        p+=i
+if(n==p and m==c):
+    print("Amicable")
+else:
+    print("Not Amicable")
+
+Unique number 
+n=int(input())#22
+temp=n
+l=[]
+c=0
+k=0
+while(n>0):
+    c=c+1
+    r=n%10
+    if(r in l):
+        break
+    else:
+        k=k+1
+        l.append(r)
+        n=n//10
+if(c==k):
+    print("Unique Number")
+else:
+    print("Not Unique Number")
+
+
+sum of the given numbers
+n=int(input())
+c=0
+for i in range(0,n):
+    a,b=map(int,input().split())
+    c=a+b
+    print(c)
+
+PHONE NUMBER VALIDATION:
+n=int(input())
+temp=n
+i=0
+while temp:
+    i+=1
+    r=temp%10
+    temp//=10
+if i==10 and r!=0:
+    print("Valid")
+else:
+    print("Invalid")
+
+
+14th page
+prime number IBM 
+n=int(input())
+for i in range(2,(n//2)+1):
+    if(n%i==0):
+        print("not a prime")
+        break
+else:
+    print("prime")
+
+perfect square root or not
+n=int(input())
+for i in range(1,n):
+    if(i*i==n):
+        break;
+if(n==i*i):
+    print("True")
+else:
+    print("False")
+
+
+reverse of a numbers
+n=int(input())
+rev=0
+while(n):
+    d=n%10;
+    n=n//10;
+    rev=rev*10+d
+print(rev)    
+
+largest digit
+n=int(input())
+m=0
+while(n!=0):
+    d=n%10;
+    n=n//10;
+    if(m<d):
+        m=d
+print(m)        
+
+happy number
+n=int(input())
+while(n>9):
+    s=0
+    while(n!=0):
+        d=n%10
+        n=n//10
+        s+=d*d
+    n=s
+if(n==1 or n==7):
+    print("True")
+else:
+    print("False")
+
+
+page 15th
+adam number
+n=int(input())
+sq=n*n
+temp=n
+rev=0
+rev2=0
+while(n!=0):
+    d=n%10;
+    n=n//10;
+    rev=rev*10+d
+sq2=rev*rev
+while(sq2!=0):
+    h=sq2%10;
+    sq2=sq2//10
+    rev2=rev2*10+h
+if(rev2==sq):
+    print("True")
+else:
+    print("False")
+
+
+GCD or HCF
+a,b=map(int,input().split())
+res=0
+while(b):
+    res=a%b;
+    a=b;
+    b=res;
+print(a)    
+
+
+Find two distinct prime numbers with given product 
+n=int(input())
+c=0
+for i in range(1,n+1):
+    for j in range(2,n+1):
+        for k in range(2,n+1):
+            if(i%j!=0 and i%k!=0):
+                if(j*k==n):
+                    p=j;
+                    q=k;
+                    c+=1
+                    break;
+if(c!=0):
+    print(q,p)
+else:
+    print("-1")
+
+
+Fibonacci or not
+n=int(input())
+a=0
+b=1
+if(n==0):
+    print("fib series")
+c=a+b
+while(c<n):
+    a=b
+    b=c
+    c=a+b
+if(c==n):
+    print("True")
+else:
+    print("False")
+
+fibonacci
+n=int(input())
+a=0
+b=1
+c=0
+for i in range(1,n+1):
+    print(c,end=' ')
+    a=b
+    b=c
+    c=a+b
+    
+17th page
+tables
+n,r=map(int,input().split())
+for i in range(r+1):
+    if(i%2==0):
+        i=i+1
+    else:
+        print(n,"x",i,"=",n*i)
+    
+
+Predict the winner in Coin Game
+m,n=map(int,input().split())
+if(m%2==0 or n%2==0):
+    print("Player 1")
+else:
+    print("Player 2")
+
+
+
+palindrome
+n=int(input())
+i=0
+w=0
+for i in range(n):
+    a=int(input())
+    w=a
+    r=0;s=0
+    while(a!=0):
+        r=a%10
+        s=s*10+r
+        a=a/10
+    if(w!=s):
+        print("False")
+    else:
+    print("True")
+        
+
+optical sorting
+a=int(input())
+while(a):
+    b=int(input())
+    s=list(map(int,input().split()))
+    b=sorted(s)
+    if(s==b):
+        print(0)
+    else:
+        print(max(b)-min(b))
+    a-=1
+
+
+Weird Palindrome Making
+t=int(input())
+for i in range(t):
+    c=0
+    n=int(input())
+    a=list(map(int,input().split()))
+    s=len(a)
+    for j in range(0,s):
+        if a[j]%2!=0:
+            c+=1
+    print(c//2)
+
+Can share equally?
+x,y=map(int,input().split())
+if ((x%2==0) and (x>0 or y%2==0)):
+   print("YES")
+else:
+    print("NO")
+
+
+Make Array Elements Equal 
+a=int(input())
+ar=list(map(int,input().split()))
+if(len(set(ar))==1):
+    print(0)
+else:
+    c=mc=0
+    for i in range(a):
+        c=0
+        for j in range(i,a):
+            if(ar[i]==ar[j]):
+                c+=1
+        if(mc<c):
+            mc=c
+    print(mc)
+
+Area of Triangle 
+a,b,c=map(int,input().split())
+s=(a+b+c)/2
+area=(s*(s-a)*(s-b)*(s-c))**0.5
+print("%.2f"%float(area))
+
+
+find the average of two numbers
+a,b=map(int,input().split())
+result=((a+b)/2)
+print("%.4f"%result)
+
+
+Find ASCII Value of a Character
+a=str(input())
+print(ord(a))
+
+Program to find the maximum number of handshakes
+a=int(input())
+result=int((((a-1)*a)/2))
+print(result)
+
+
+python patterns
+Half diamond star pattern
+n=int(input())
+if(n>=3 and n<=100):
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print("*",end='')
+        print()
+    for i in range(n-1,0,-1):
+        for j in range(1,i+1):
+            print("*",end='')
+        print()
+else:
+    print("The pattern is not possible")
+        
+print the following pattern 
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+2-i):
+        print(j,end='')
+    print()    
+
+2nd page
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(j==1 or i==n or i==j):
+            print("*",end='')
+        else:
+            print(" ",end='')
+    print()        
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(j==1 or j==n or i==j):
+            print("* ",end='')
+        else:
+            print("  ",end='')
+    print()    
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(i==j or i+j==n+1):
+            print("x",end='')
+        else:
+            print("0",end='')
+    print()        
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if(i==j):
+            print("0",end='')
+        else:
+            print("x",end='')
+    print()        
+
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(n,0,-1):
+        print(j,end=' ')
+    print()    
+
+
+3rd page
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n-1):
+        print(j,end='')
+    for j in range(1,n-2):
+        print(j,end='')
+    print()    
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n-1):
+        print(j,end='')
+    for j in range(n-3,0,-1):
+        print(j,end='')
+    print()    
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(end=" ")
+    for j in range(1,(i*2)):
+        print(i,end="")
+    print(end="\n")
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        print(chr(i+64),end=' ')
+    print()    
+
+
+4th page
+n=int(input())
+for i in range(1,n+1):
+    for j in range(i,n+1):
+        print(j,end=' ')
+    print()    
+
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j,end="")
+    print()    
+
+
+n=int(input( ))
+for i in range(n,0,-1):
+    for j in range(1,i+1):
+        print("%c"%(i+64),end=' ')
+    print()
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        print(i,end=' ')
+    print()   
+
+
+
+lists,Tuples,Dictionaries
+1st page
+Sort an Array of 0s and 1s
+n=int(input())
+c=0
+a=list(map(int,input().split()))
+for i in a:
+    if(i==0):
+        print(i,end=" ")
+    else:
+        c=c+1
+for i in range(0,c):
+    print("1",end=" ")
+
+
+Distinct subarray
+n=int(input())
+m=int(input())
+c=0
+for i in range(n,m+1):
+    sum=0
+    for j in range(i,m+1):
+        sum+=j
+        if(sum%2!=0):
+            c+=1
+print(c)
+
+
+Subarray Sum Equals K
+n,k=input().split()
+n=int(n)
+k=int(k)
+arr=list(map(int,input().split()))
+res=0
+for i in range(n):
+    summ=0
+    for j in range(i,n):
+        summ+=arr[j]
+        if summ==k:
+            res+=1
+print(res)
+
+Factor sum
+l=list(map(int,input().split(",")))
+s=[]
+k=[]
+for i in l:
+    for j in range(1,i+1):
+        if i%j==0:
+            s.append(j)
+    if sum(s) in l:
+        k.append(i)
+        s.clear()
+    else:
+        s.clear()
+k.sort()
+if len(k)>0:
+    print(*k)
+else:
+    print(-1)
+
+buy books
+a=int(input())
+arr=list(map(int,input().split()))
+arr2=list(map(int,input().split()))
+s1=s2=0
+for i in arr:
+    s1+=i
+for i in arr2:
+    s2+=i
+if s1>s2:
+    print(0)
+else:
+    print(s2-s1)
+
+
+2nd page
+Airport authority 
+n=int(input())
+c=0
+a=[]
+for i in range(n):
+    a.append(int(input()))
+p=int(input())
+for i in a:
+    if(i<=p):
+        c=c+1
+    else:
+        c=c+2
+print(c)
+
+Wave format 
+n=int(input())
+a=list(map(int,input().split()))
+b=sorted(a)
+b.reverse()
+co=[]
+ce=[]
+for i in range(n):
+    if i%2==0:
+        ce.append(b[i])
+    else:
+        co.append(b[i])
+k=[]
+for i in range(len(co)):
+    k.append(co[i])
+    k.append(ce[i])
+if len(co)!=len(ce):
+    k.append(ce[-1])
+for i in k:
+    print(i,end=' ')
+
+Weird Palindrome Making
+for _ in range(int(input())):
+    a=int(input())
+    b=list(map(int,input().split()))
+    c=0
+    for i in b:
+        if i%2==1:
+            c+=1
+    print(int(c/2))
+
+
+Roman Number
+def printRoman(number):
+    num = [1, 4, 5, 9, 10, 40, 50, 90,
+        100, 400, 500, 900, 1000]
+    sym = ["I", "IV", "V", "IX", "X", "XL",
+        "L", "XC", "C", "CD", "D", "CM", "M"]
+    i = 12
+    while number:
+        div = number // num[i]
+        number %= num[i]
+        while div:
+            print(sym[i], end = "")
+            div -= 1
+        i -= 1
+if __name__== "__main__":
+    number = int(input())
+    printRoman(number)
+
+Write a function to rotate the list of elements by N positions. 
+n=int(input())
+arr=list(map(int,input().split()))
+k=int(input())
+if k>n:
+    k=int(k%len(arr))
+arr=(arr[-k:]+ arr[:-k])
+print(' '.join([str(i) for i in arr]))
+
+3 rd page
+Half List  
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(n-1,(n//2)-1,-1):
+    print(a[i],end=' ')
+for i in range(0,n//2,1):
+    print(a[i],end=' ')
+
+Remove duplicates from an array 
+n=int(input())
+a=list(map(int,input().split()))
+a=set(a)
+a.union()
+print(*a)
+
+Program to find the sum of perfect square elements in an array 
+import math
+n=int(input())
+a=list(map(int,input().split()))
+sum=0
+for i in a:
+    s=int(math.sqrt(i))
+    if(i==s*s):
+        sum=sum+i
+print(sum)        
+
+Program to convert a given number to words 
+def convert_to_words(num):
+    l=len(num)
+    if (l==0):
+        print("empty string")
+        return
+    if (l>4):
+        print("Length more than 4 is not supported")
+        return
+    single_digits=["zero","one","two","three","four","five","six","seven","eight","nine"]
+    two_digits=["","ten","eleven","twelve","thirtneen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
+    tens_multiple=["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
+    tens_power=["hundred","thousand"]
+    if (l==1):
+        print(single_digits[ord(num[0])-48])
+        return
+    x=0
+    while(x<len(num)):
+        if (l>=3):
+            if (ord(num[x])-48!=0):
+                print(single_digits[ord(num[x])-48],end=" ")
+                print(tens_power[l-3],end=" ")
+            l-=1
+        else:
+            if(ord(num[x])-48==1):
+                sum=(ord(num[x])-48+ord(num[x+1])-48)
+                print(two_digits[sum])
+                return
+            elif(ord(num[x])-48==2 and ord(num[x+1])-48==0):
+                print("twenty")
+                return
+            else:
+                i=ord(num[x])-48
+                if(i>0):
+                    print(tens_multiple[i],end=" ")
+                else:
+                    print("",end="")
+                x+=1
+                if(ord(num[x])-48!=0):
+                    print(single_digits[ord(num[x])-48])
+        x+=1
+num=input()
+convert_to_words(num)
+
+Count 
+n=int(input())
+a=list(map(int,input().split()))
+c=0;
+p=0;
+for i in range(len(a)):
+    if(a[i]%2==0):
+        c=c+1;
+    if(a[i]%2!=0):
+        p=p+1;
+print(c,p)        
+
+4th page
+Record Breaker
+cases = int(input().strip())
+for q in range(1, cases + 1):
+    l = int(input().strip())
+    ls = list(map(int, input().split(" ")))
+    l = len(ls)
+    local_max = 0
+    count = 0
+    for i in range(l):
+        if i == 0:
+            if ls[1] < ls[0]:
+                local_max = ls[0]
+                count += 1
+            continue
+        if i == l - 1:
+            if ls[i] > ls[i - 1] and ls[i] > local_max:
+                count += 1
+            break
+        if ls[i] > ls[i - 1] and ls[i] > ls[i + 1] and ls[i] > local_max:
+            count += 1
+            local_max = ls[i]
+            continue
+    
+    print("Case #{}: {}".format(q, count))
+
+temperatures
+class Solution(object):
+    def dailyTemperatures(self, T):
+        ans = [0 for i in range(len(T))]
+        stack = []
+        stack.append(0)
+        i=1
+        while i < len(T):
+            while len(stack) and T[i]>T[stack[-1]]:
+                index = stack[-1]
+                ans[index] = i-index
+                stack.pop()
+            if not len(stack) or T[i]<=T[stack[-1]]:
+                stack.append(i)
+            i+=1
+        return ans
+ob1 = Solution()
+ob2 = int(input())
+ob2 = list(map(int,input().split()))
+ob3 = ob1.dailyTemperatures(ob2)
+print(' '.join([str(i) for i in ob3]))
+
+plus one
+n=int(input())
+l=list(map(int,input().split()))
+k=""
+for i in l:
+    k+=str(i)
+k=int(k)+1
+for i in str(k):
+    print(i,end=" ")
+
+
+5th page
+Circular Array Rotation 
+n,k,m=map(int,input().split())
+l=list(map(int,input().split()))
+s=l[-k:]+l[:-k]
+for i in range(m):
+    print(s[int(input())])
+
+
+A Very Big Sum 
+n=int(input())
+a=list(map(int,input().split()))
+s=0;
+for i in range(len(a)):
+    s=s+a[i];
+print(s)    
+
+Merge Without Extra Space 
+n=int(input())
+for i in range(n):
+    a,b=map(int,input().split())
+    x=list(map(int,input().split()))
+    y=list(map(int,input().split()))
+    z=x+y;
+    z.sort()
+    print(*z)
+
+6th page
+Compare Triplets
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+c=0;
+p=0;
+h=0
+for i in range(len(a)):
+    for j in range(len(b)):
+        if(a[i]>b[j] and i==j):
+            c=c+1;
+        if(a[i]<b[j] and i==j):
+            p=p+1;
+        if(a[i]==b[j] and i==j):
+            h=h+1;
+print(c,p)            
+
+Policemen and thieves
+def solve(lis,k):
+    Po=[x for x in range(len(lis)) if lis[x]=='P']
+    Th=[x for x in range(len(lis)) if lis[x]=='T']
+    i,j=0,0
+    ans=0
+    while i<len(Po) and j<len(Th):
+        if max(Po[i],Th[j])-min(Po[i],Th[j])<=k:i+=1;j+=1;ans+=1
+        elif Po[i]>Th[j]:j+=1
+        else:i+=1
+    return ans
+for _ in range(int(input())):
+    n,k=map(int,input().split())
+    ans=0
+    for i in range(n):
+        ans+=(solve(list(map(str,input().split())),k))
+    print(ans)
+
+Missing number in array 
+n=int(input())
+for i in range(n):
+    p=int(input())
+    a=list(map(int,input().split()))
+    for i in range(1,p+1):
+        if(i not in a):
+            print(i)
+
+
+Kadane's Algorithm 
+t=int(input())
+for k in range(t):
+    n=int(input())
+    arr=list(map(int,input().split()))
+    res=-100
+    for i in range(n):
+        s=0
+        for j in range(i,n):
+            s+=arr[j]
+            if(s>res):
+                res=s
+    print(res)
+
+Count the triplets 
+import math
+t=int(input())
+for i in range(t):
+    n=int(input())
+    p=list(map(int,input().split()))
+    c=0
+    for j in p:
+        for k in p:
+            if j!=k:
+                if j+k in p:
+                    c+=1
+    if(c>0):
+        print(c//2)
+    else :
+        print(-1)
+
+7th page
+Sum of matrix elements 
+n=int(input())
+m=int(input())
+s=0
+for i in range(n):
+    a=list(map(int,input().split()))
+    s=s+sum(a)
+print(s)    
+
+Subarray with given sum 
+t=int(input())
+for i in range(t):
+    n,se=map(int,input().split())
+    arr=list(map(int,input().split()))
+    x=y=count=0
+    for i in range(n):
+        s=0
+        for j in range(i,n):
+            s+=arr[j]
+            if(s==se):
+                x=i
+                y=j
+                count=1
+                break
+        if(count==1):
+            break
+    if(count==1):
+        print(x+1,end=" ")
+        print(y+1)
+    else:
+        print(-1)
+
+Balanced Array 
+n=int(input())
+for _ in range(n):
+    p=int(input())
+    r=0
+    l=list(map(int,input().split()))
+    s=0
+    c=0
+    for j in range(p):
+        s=sum(l[:j])
+        c=sum(l[j+1:])
+        if(c==s):
+            r+=1
+    if(r==0):
+        print("NO")
+    else:
+        print("YES")
+
+Most Frequent 
+n=int(input())
+a=list(map(int,input().split()))
+k=0
+b=[]
+for i in a:
+    if(a.count(i)>k):
+        k=a.count(i)
+for i in a:
+    if(a.count(i)==k):
+        b.append(i)
+print(min(b))
+
+8th page
+Mark The Answer 
+n,k=map(int,input().split())
+s,c=0,0
+l=list(map(int,input().split()))
+for i in l:
+    if i<=k:
+        c+=1
+    elif i>k and s==0:
+        s+=1
+        continue
+    else:
+        break
+print(c)
+
+R-r-riddikulus! once again
+n,d=map(int,input().split())
+a=list(map(int,input().split()))
+print(*(a[d:]+a[:d]))
+
+Speed  
+t=int(input())
+for i in range(t):
+    c=0
+    n=int(input())
+    a=list(map(int,input().split()))
+    min=a[0]
+    for i in range(len(a)):
+        if(a[i]<=min):
+            c+=1
+            min=a[i]
+    print(c)
+
+Excel Sheet Column Title
+n=int(input())
+t=""
+while(n):
+    r=n%26
+    if r==0:
+        t+='z'
+    else:
+        t+=chr(64+r)
+    n/=26
+    n=int(n)
+print(t[::-1])
+
+
+Shuffle the Array 
+a=int(input())
+arr=list(map(int,input().split()))
+mid=a//2
+for i in range(mid):
+    print(arr[i],arr[mid+i],end=" ")
+
+
+
+9th page
+Help Jarvis! 
+t=int(input())
+for i in range(t):
+    l=input()
+    li=[]
+    for i in l:
+        li.append(int(i))
+    mi=min(li)
+    m=max(li)
+    c=0
+    arr=[]
+    for i in range(mi,m+1):
+        arr.append(i)
+    if sorted(li)==sorted(arr):
+        print('YES')
+    else:
+        print('NO')
+
+
+SnackDown Contest 
+x=int(input())
+for o in range(x):
+    n=int(input())
+    a=list(map(int,input().split()))
+    b=list(map(int,input().split()))
+    l=[]
+    for i in range(1,len(a)):
+        if(a[i] not in l):
+            l.append(a[i])
+    for i in range(1,len(b)):
+        if b[i] not in l:
+            l.append(b[i])
+    if len(l)+1>n:
+        print('YES')
+    else:
+        print('NO')
+
+
+Third Maximum Number 
+a=int(input())
+b=list(map(int,input().split()))[:a]
+if len(set(b))>=3:
+    b=list(set(b))
+    b.sort()
+    b.reverse()
+    print(b[2])
+else:
+    print(max(b))
+
+Product of Array Except Self
+n=int(input())
+arr=list(map(int,input().split()))
+s=1
+for i in range(n):
+    s=1
+    for j in range(n):
+        if(i!=j):
+            s*=arr[j]
+    print(s,end=" ")
+
+10th page
+Monk and Welcome Problem
+n=int(input())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+s=0
+for i in range(n):
+    s=a[i]+b[i]
+    print(s,end=' ')
+
+
+Find the Duplicate Number 
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(len(a)):
+    c=0;
+    for j in range(len(a)):
+        if(a[i]==a[j] and i!=j):
+            c=c+1;
+    if(c!=0):
+        print(a[i])
+        break;
+            
+Find First and Last Position of Element in Sorted Array
+n=int(input())
+arr=list(map(int,input().split()))
+s=int(input())
+c=0
+for i in range(n):
+    if(arr[i]==s):
+        print(i,end=" ")
+        x=i
+        c+=1
+if(c==1):
+    print(x)
+if(c==0):
+    print(-1,-1)
+
+Search in Rotated Sorted Array 
+n=int(input())
+a=list(map(int,input().split()))
+h=int(input())
+for i in range(len(a)):
+    c=0;
+    if(a[i]==h):
+        c=c+1;
+        print(i)
+        break;
+if(c==0):
+    print(-1);
+
+
+11th page
+Maximum Sum Circular Subarray 
+a=int(input())
+arr=list(map(int,input().split()))
+ms=-1000
+for i in range(a):
+    for j in range(a):
+        for k in range(j,a):
+            s=sum(arr[j:k+1])
+            if ms<s:
+                ms=s
+    t=arr[0]
+    arr[0]=arr[-1]
+    for j in range(1,a):
+        temp=arr[j]
+        arr[j]=t
+        t=temp
+print(ms)
+
+First Missing Positive 
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(1,n+1):
+    if(i not in a):
+        print(i)
+        break
+
+Make Two Arrays Equal by Reversing Sub-arrays
+n1=int(input())
+a1=list(map(int,input().split()))
+n2=int(input())
+a2=list(map(int,input().split()))
+if n1==n2:
+    for i in range(n1):
+        if a1[i] not in a2:
+            print(False)
+            break
+    else:
+        print(True)
+else:
+    print(True)
+
+
+Max Consecutive Ones
+x=int(input())
+nums=list(map(int,input().split()))
+k=[]
+c=0
+for i in nums:
+    if i == 1:
+        c+=1
+    elif(i!=1):
+        k.append(c)
+        c=0
+k.append(c)
+print(max(k))
+
+12th page
+Move Zeroes 
+n=int(input())
+a=list(map(int,input().split()))
+c=0;
+for i in range(n):
+    if(a[i]!=0):
+        print(a[i],end=' ')
+    else:
+        c=c+1;
+for i in range(c):
+    print(0,end=' ')
+
+
+Majority Element 
+n=int(input())
+a=list(map(int,input().split()))
+c=0
+for i in range(n):
+    c=1
+    for j in range(n):
+        if(a[i]==a[j] and i!=j):
+            c=c+1;
+    if(c>n/2):
+        print(a[i])
+        break
+
+Squares of a Sorted Array 
+n=int(input())
+a=list(map(int,input().split()))
+c=[]
+for i in a:
+    c.append(i*i)
+c.sort()
+print(*c)
+
+13th page
+Create Target Array in the Given Order 
+n=int(input())
+t=[]
+l=list(map(int,input().split()))[:n]
+m=int(input())
+b=list(map(int,input().split()))[:n]
+for i in range(n):
+    t.insert(b[i],l[i])
+for i in range(n):
+    print(t[i],end=' ')
+
+
+Find Numbers with Even Number of Digits
+n=int(input())
+a=list(map(int,input().split()))
+c=0;
+for i in range(len(a)):
+    dc=0;
+    while(a[i]):
+        d=a[i]%10;
+        a[i]=a[i]//10;
+        dc=dc+1;
+    if(dc%2==0):
+        c=c+1;
+print(c)            
+
+Decompress Run-Length Encoded List
+n=int(input())
+a=list(map(int,input().split()))
+l=[]
+for i in range(0,n-1,2):
+    fre=a[i]
+    val=a[i+1]
+    for i in range(fre):
+        l.append(val)
+print(*l)
+
+How Many Numbers Are Smaller Than the Current Number 
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(len(a)):
+    c=0;
+    for j in range(len(a)):
+        if(a[i]>a[j] and i!=j):
+            c=c+1;
+    print(c,end=' ');        
+
+Greatest Number of Candies 
+n=int(input())
+a=list(map(int,input().split()))
+m=int(input())
+p=0
+for i in range(len(a)):
+    if(a[i]>p):
+        p=a[i];
+for i in range(len(a)):
+    if(a[i]+m>=p):
+        print("True",end=' ')
+    else:
+        print("False",end=' ')
+
+
+14th page
+Sum of odd and even digits 
+n=int(input())
+a=list(map(int,input().split()))
+s=0
+p=0
+for i in range(len(a)):
+    if(i%2==0):
+        s=s+a[i];
+    else:
+        p=p+a[i];
+if(p-s==0):
+    print("YES")
+else:
+    print("NO")
+
+
+UNIQUE MAXIMUM NUMBER  
+n=int(input())
+a=list(map(int,input().split()))
+c=[]
+m=0;
+for i in range(n):
+    p=0;
+    for j in range(n):
+        if(a[i]==a[j] and i!=j):
+            p=p+1;
+    if(p==0):
+        c.append(a[i])
+        m=m+1;
+if(m!=0):
+    print(max(c))
+else:
+    print("-1")
+
+Sorting Frequency 
+n=int(input())
+l=list(map(int,input().split()))
+d={}
+for i in l:
+    if(i not in d.keys()):
+        d[i]=1
+    else:
+        d[i]+=1
+l=[]
+c=0
+for i in d:
+    if(d[i]>1):
+        c+=1
+for i in range(c):
+    m=ele=0
+    for i in d:
+        if(d[i]>m):
+            m=d[i]
+            ele=i
+    l.append(ele)
+    d[ele]=0
+a=[]
+for i in d:
+    if(d[i]>0):
+        a.append(i)
+a.sort()
+for i in a:
+    l.append(i)
+print(*l)
+
+Rotation 
+t=int(input())
+for i in range(1,t+1):
+    a,b=map(int,input().split())
+    x=list(map(int,input().split()))
+    for i in range(1,b+1):
+        y=x[-1]
+        x.remove(y)
+        x=x[::-1]
+        x.append(y)
+        x=x[::-1]
+    print(*x)
+
+
+15th page
+Predict the winner 
+n=int(input())
+a=list(map(int,input().split()))
+x=0;
+y=0;
+for i in range(n):
+    if(i%2==0):
+        x=x+a[i]
+    else:
+        y=y+a[i]
+if((x-y)%4==0):
+    print("X")
+else:
+    print("Y")
+
+Display unique values in an Array
+n=int(input())
+a=list(map(int,input().split()))
+m=0;
+for i in range(len(a)):
+    c=0;
+    for j in range(len(a)):
+        if(a[i]==a[j] and i!=j):
+            c=c+1;
+    if(c==0):
+        print(a[i],end=' ')
+        m=m+1;
+if(m==0):
+    print(-1)
+
+CLOTHING STORE 
+n=int(input())
+arr=list(map(int,input().split()))
+c=0
+b=set(arr)
+p=[]
+for i in b:
+    p.append(arr.count(i))
+
+for j in range(len(p)):
+    c=c+(p[j]//2)
+    
+print(c)
+
+
+strings
+1st page
+bits
+n=int(input())
+x=0
+for i in range(n):
+    s=input()
+    for j in range (len(s)-1):
+        if s[j]=='+' and s[j+1]=='+':
+            x+=1
+        elif s[j]=='-' and s[j+1]=='-':
+            x-=1
+print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
